@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coral Reef Health Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="iso-header">ISO</h1>
+            <h2 class="subtitle">Intelligent Systems for Oceans</h2>
+            <h3 class="main-title">Coral Reef Health Monitoring System</h3>
+            <p class="tagline">AI-powered coral classification using CNN</p>
+        </header>
+
+        <form id="upload-form" class="upload-section">
+            <div class="file-upload-container">
+                <label for="file-input" class="file-label">Choose an image to analyze</label>
+                <input type="file" id="file-input" accept="image/*" required>
+            </div>
+
+            <div id="image-preview-container" class="image-preview-container" style="display: none;">
+                <img id="image-preview" alt="Image Preview" class="image-preview">
+            </div>
+
+            <button type="button" id="classify-btn" class="classify-btn" disabled>Classify</button>
+        </form>
+
+        <div id="loading" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing coral health...</p>
+        </div>
+
+        <div id="result" class="result-card" style="display: none;">
+            <div class="result-header">
+                <h2>Analysis Results</h2>
+            </div>
+            <div class="images-comparison">
+                <div class="image-result">
+                    <h3>Original Image</h3>
+                    <img id="original-image-display" class="result-image" alt="Original Image">
+                    <div class="image-prediction">
+                        <div class="prediction-text">
+                            <span class="label">Classification:</span>
+                            <span id="original-prediction" class="value prediction-result"></span>
+                        </div>
+                        <div class="confidence-text">
+                            <span class="label">Confidence:</span>
+                            <span id="original-confidence" class="value confidence-value"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-result">
+                    <h3>Enhanced Image</h3>
+                    <img id="enhanced-image-display" class="result-image" alt="Enhanced Image">
+                    <div class="image-prediction">
+                        <div class="prediction-text">
+                            <span class="label">Classification:</span>
+                            <span id="enhanced-prediction" class="value prediction-result"></span>
+                        </div>
+                        <div class="confidence-text">
+                            <span class="label">Confidence:</span>
+                            <span id="enhanced-confidence" class="value confidence-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="confidence-section">
+                <h3>Confidence Comparison</h3>
+                <div class="confidence-bars">
+                    <div class="confidence-bar-container">
+                        <span class="bar-label">Original</span>
+                        <div class="confidence-bar">
+                            <div id="original-confidence-fill" class="confidence-fill"></div>
+                        </div>
+                        <span id="original-confidence-text" class="confidence-percentage"></span>
+                    </div>
+                    <div class="confidence-bar-container">
+                        <span class="bar-label">Enhanced</span>
+                        <div class="confidence-bar">
+                            <div id="enhanced-confidence-fill" class="confidence-fill"></div>
+                        </div>
+                        <span id="enhanced-confidence-text" class="confidence-percentage"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <p></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
