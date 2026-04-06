@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Coral Reef Health Monitoring System
 
 A machine learning system for monitoring coral reef health using underwater image analysis.
@@ -140,3 +141,6 @@ This lean repository setup (~5-10 MB) allows for:
 - ✅ Efficient storage
 - Add web interface for easier use
 - Include more advanced image enhancement techniques
+=======
+# ISO-Intelligent-system-for-oceans
+>>>>>>> 931ab1381b5a83423e5d8075bd28847955b0166a
