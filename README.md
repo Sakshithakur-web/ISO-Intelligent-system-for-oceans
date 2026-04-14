@@ -141,6 +141,4 @@ This lean repository setup (~5-10 MB) allows for:
 - ✅ Efficient storage
 - Add web interface for easier use
 - Include more advanced image enhancement techniques
-=======
-# ISO-Intelligent-system-for-oceans
->>>>>>> 931ab1381b5a83423e5d8075bd28847955b0166a
+
