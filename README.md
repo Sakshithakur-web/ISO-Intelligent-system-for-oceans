@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# Coral Reef Health Monitoring System
+# Coral Reef Health Monitoring System using machine learning
 
 A machine learning system for monitoring coral reef health using underwater image analysis.
 
